@@ -1,4 +1,35 @@
 .chat-main
   .chat-main_group-info
+  .chat-main__group-info
+    .chat-main__group-info__whole
+      .chat-main__group-info__whole__current-name
+        .chat-main__group-info__whole__current-name__current-name1
+          test
+        .chat-main__group-info__whole__current-name__current-name2
+        = link_to "#", class: "contents__btn" do
+          Edit
+      .chat-main__group-info__whole__edit
+        member : Naomi Scott
+      .chat-main__group-info__whole__bottom
   .chat-main__message-list
+    .chat-main__message-list__whole
+      .chat-main__message-list__whole__top
+        .chat-main__message-list__whole__top__user-name
+          Naomi Scott
+        .chat-main__message-list__whole__top__sent-time
+          2020/2/21(Fri) 13:09:59
+      .chat-main__message-list__whole__bottom
+        .chat-main__message-list__whole__bottom__sent-message
+          Hey Guys!!
   .chat-main__message-form
+    .chat-main__message-form__sending-message
+      .chat-main__message-form__sending-message__left-message-1
+        %input.login-input-text{:name => "messages", :placeholder => "type a message"}/
+      .chat-main__message-form__sending-message__left-message-2
+        //=link_to "", class: "contents__btn-3" do
+        %label{class: "contents__btn-3"}
+          = icon('far','image')
+          %input.input-image-file{:type => "file", :name => "pic[image]", :value => "file"}/
+        .chat-main__message-form__sending-message__left-message-2__2
+    .chat-main__message-form__right-message
+      %input.input-submit{:name => "Send", :placeholder => "Send", :type => "submit", :value => "Send"}/
