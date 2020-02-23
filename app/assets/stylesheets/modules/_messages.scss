@@ -15,8 +15,7 @@
     display: $fl;
     justify-content: space-around;
     align-items: center;
-  }
-    &_user-name_top-items{
+    &_top-items{
       background-color: #253141;
       height: 20px;
       width: 260px;
@@ -24,18 +23,20 @@
       line-height: 20px;
       display: $fl;
       justify-content: space-between;
-    }
-      &_user-name_top-items__name{
+      &__name{
         color: white;
       }
-        &_user-name_top-items__parent{
+        &__parent{
           float: right;
           width: 60px;
-        }
-          &_user-name_top-items__parent__icon{
+          &__icon{
             display: $fl;
             border-bottom: none;
           }
+        }
+    }
+  
+  }
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
@@ -57,79 +58,79 @@
   background-color: #ffffff;
   &__group-info{
     height: 100px;
-  }
-    &__group-info__whole{
+    &__whole{
       margin-right: 40px;
       margin-left: 40px;
-    }
-      &__group-info__whole__current-name{
+      &__current-name{
         display: $fl;
         justify-content: space-between;
-      }
-        &__group-info__whole__current-name__current-name1{
+        &__current-name1{
           margin-top: 35px;
           color: #333333;
           font-size: 20px;
           margin-bottom: 15px;
         }
-      &__group-info__whole__edit{
+      }
+      &__edit{
         color: #999999;
         font-size: 12px;
       }
+    }
+  }
   &__message-list{
     background-color: #fafafa;
     height: calc(100vh - 190px);
-  }
-    &__message-list__whole{
+    &__whole{
       margin-left: 40px;
       padding-top: 46px;
       margin-bottom: 46px;
-    }
-      &__message-list__whole__top{
+      &__top{
         display: $fl;
         margin-bottom: 12px;
-      }
-        &__message-list__whole__top__user-name{
+        &__user-name{
           color: #333333;
           font-size: 16px;
         }
-        &__message-list__whole__top__sent-time{
+        &__sent-time{
           color: #999999;
           font-size: 12px;
           margin-left: 10px;
         }
-      &__message-list__whole__bottom{
       }
-        &__message-list__whole__bottom__sent-message{
+      &__bottom{
+        &__sent-message{
           color: #434a54;
           font-size: 14px;
         }
+      }
+    }
+  }
   &__message-form{
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
     display: $fl;
-  }
-  &__message-form__sending-message{
+  &__sending-message{
     height: 50px;
     width: calc(100% - 30px);
     display: $fl;
     position: relative;
-  }
-    &__message-form__sending-message__left-message-1{
+    &__left-message-1{
       height: 50px;
       width: 100%;
       background-color: white;
       position: absolute;
       z-index: 0.5;
     }
-    &__message-form__sending-message__left-message-2{
+    &__left-message-2{
       position: absolute;
       right: 15px;
       top: 17px;
       z-index: 1;
       background-color: white;
     }
+  }
+  }
 }
 
 .contents__btn{
