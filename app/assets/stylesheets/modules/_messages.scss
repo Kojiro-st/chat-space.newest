@@ -2,12 +2,15 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 100vh;
+}
+
 .wrapper{
   display: $fl;
 }
 
 .side-bar{
-  height: 100vh;
   width: 300px;
   background-color: $gr;
   &_user-name{
@@ -40,6 +43,19 @@
   &__group-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    &__group{
+      height: 65px;
+      padding: 20px 40px 20px 20px;
+      color: white;
+      text-decoration: none;
+      &__name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+      }
+    }
   }
 }
 
@@ -52,8 +68,27 @@
   color: $wh;
 }
 
+.group{
+  height: 65px;
+  padding: 20px 40px 20px 20px;
+}
+
+.group__name{
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: white;
+  border-bottom: none;
+}
+
+.group__message{
+  font-size: 11px;
+  color: white;
+  border-bottom: none;
+}
+
+
 .chat-main{
-  height: 100vh;
+  // height: 100vh;
   width: calc(100vw - 300px);
   background-color: #ffffff;
   &__group-info{
@@ -80,10 +115,10 @@
   &__message-list{
     background-color: #fafafa;
     height: calc(100vh - 190px);
+    padding: 46px 40px;
+    overflow: scroll;
     &__whole{
-      margin-left: 40px;
-      padding-top: 46px;
-      margin-bottom: 46px;
+      padding-bottom: 40px;
       &__top{
         display: $fl;
         margin-bottom: 12px;
@@ -117,14 +152,14 @@
     position: relative;
     &__left-message-1{
       height: 50px;
-      width: 100%;
+      width: calc(100% - 125px);
       background-color: $wh;
       position: absolute;
       z-index: 0.5;
     }
     &__left-message-2{
       position: absolute;
-      right: 15px;
+      right: 135px;
       top: 17px;
       z-index: 1;
       background-color: $wh;
@@ -153,6 +188,7 @@ border: solid 1px $bl;
   width: 100%;
   height: 50px;
   border: 0;
+  position: relative;
 }
 
 .contents__btn-3{
@@ -169,6 +205,8 @@ border: solid 1px $bl;
   height: 50px;
   cursor: pointer;
   margin-left: 15px;
+  position: absolute;
+  right: 0;
 }
 
 .input-image-file{
