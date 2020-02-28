@@ -4,11 +4,12 @@
     .chat-main__group-info__whole
       .chat-main__group-info__whole__current-name
         .chat-main__group-info__whole__current-name__current-name1
-          = @group.name
+          =  @group.name
         .chat-main__group-info__whole__current-name__current-name2
         = link_to edit_group_path(@group), class: "contents__btn" do
           Edit
       .chat-main__group-info__whole__edit
+        Member:
         - @group.users.each do |user|
           = user.name
       .chat-main__group-info__whole__bottom
