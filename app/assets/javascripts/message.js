@@ -61,7 +61,7 @@ $('#new_message').on('submit', function(e){
     $('.input-submit').prop('disabled', false);
   })
   .fail(function(){
-  alert("メッセージ送信に失敗しました");
+    alert("メッセージ送信に失敗しました");
 });
 })
 
